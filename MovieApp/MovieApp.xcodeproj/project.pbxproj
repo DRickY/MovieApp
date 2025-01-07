@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A54B80682D2DC0B30064F609 /* CombineInterception in Frameworks */ = {isa = PBXBuildFile; productRef = A54B80672D2DC0B30064F609 /* CombineInterception */; };
+		A54B806A2D2DC0B30064F609 /* CombineInterceptionMacros in Frameworks */ = {isa = PBXBuildFile; productRef = A54B80692D2DC0B30064F609 /* CombineInterceptionMacros */; };
+		A54B806D2D2DC0C20064F609 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A54B806C2D2DC0C20064F609 /* CombineCocoa */; };
+		A54B80702D2DC0D50064F609 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = A54B806F2D2DC0D50064F609 /* CombineExt */; };
+		A54B80732D2DC0EC0064F609 /* Connectivity in Frameworks */ = {isa = PBXBuildFile; productRef = A54B80722D2DC0EC0064F609 /* Connectivity */; };
+		A54B80762D2DC0FB0064F609 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A54B80752D2DC0FB0064F609 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		A54B80112D2DB27F0064F609 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +45,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A54B80762D2DC0FB0064F609 /* Kingfisher in Frameworks */,
+				A54B80732D2DC0EC0064F609 /* Connectivity in Frameworks */,
+				A54B80702D2DC0D50064F609 /* CombineExt in Frameworks */,
+				A54B80682D2DC0B30064F609 /* CombineInterception in Frameworks */,
+				A54B806D2D2DC0C20064F609 /* CombineCocoa in Frameworks */,
+				A54B806A2D2DC0B30064F609 /* CombineInterceptionMacros in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +83,7 @@
 				A54B800D2D2DB27F0064F609 /* Sources */,
 				A54B800E2D2DB27F0064F609 /* Frameworks */,
 				A54B800F2D2DB27F0064F609 /* Resources */,
+				A54B80782D2DC14F0064F609 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -78,6 +94,12 @@
 			);
 			name = MovieApp;
 			packageProductDependencies = (
+				A54B80672D2DC0B30064F609 /* CombineInterception */,
+				A54B80692D2DC0B30064F609 /* CombineInterceptionMacros */,
+				A54B806C2D2DC0C20064F609 /* CombineCocoa */,
+				A54B806F2D2DC0D50064F609 /* CombineExt */,
+				A54B80722D2DC0EC0064F609 /* Connectivity */,
+				A54B80752D2DC0FB0064F609 /* Kingfisher */,
 			);
 			productName = MovieApp;
 			productReference = A54B80112D2DB27F0064F609 /* MovieApp.app */;
@@ -108,6 +130,14 @@
 			);
 			mainGroup = A54B80082D2DB27F0064F609;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A54B80662D2DC0B30064F609 /* XCRemoteSwiftPackageReference "combine-interception" */,
+				A54B806B2D2DC0C20064F609 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				A54B806E2D2DC0D50064F609 /* XCRemoteSwiftPackageReference "CombineExt" */,
+				A54B80712D2DC0EC0064F609 /* XCRemoteSwiftPackageReference "connectivity" */,
+				A54B80742D2DC0FB0064F609 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A54B80772D2DC1380064F609 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A54B80122D2DB27F0064F609 /* Products */;
 			projectDirPath = "";
@@ -127,6 +157,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A54B80782D2DC14F0064F609 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint --format\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A54B800D2D2DB27F0064F609 /* Sources */ = {
@@ -148,6 +201,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -176,6 +230,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -234,7 +289,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -299,7 +354,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -340,6 +395,90 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A54B80662D2DC0B30064F609 /* XCRemoteSwiftPackageReference "combine-interception" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/capturecontext/combine-interception.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.1;
+			};
+		};
+		A54B806B2D2DC0C20064F609 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EduDo-Inc/CombineCocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+		A54B806E2D2DC0D50064F609 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineExt.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.1;
+			};
+		};
+		A54B80712D2DC0EC0064F609 /* XCRemoteSwiftPackageReference "connectivity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rwbutler/connectivity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.1;
+			};
+		};
+		A54B80742D2DC0FB0064F609 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.3;
+			};
+		};
+		A54B80772D2DC1380064F609 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = exactVersion;
+				version = 0.57.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A54B80672D2DC0B30064F609 /* CombineInterception */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A54B80662D2DC0B30064F609 /* XCRemoteSwiftPackageReference "combine-interception" */;
+			productName = CombineInterception;
+		};
+		A54B80692D2DC0B30064F609 /* CombineInterceptionMacros */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A54B80662D2DC0B30064F609 /* XCRemoteSwiftPackageReference "combine-interception" */;
+			productName = CombineInterceptionMacros;
+		};
+		A54B806C2D2DC0C20064F609 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A54B806B2D2DC0C20064F609 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+		A54B806F2D2DC0D50064F609 /* CombineExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A54B806E2D2DC0D50064F609 /* XCRemoteSwiftPackageReference "CombineExt" */;
+			productName = CombineExt;
+		};
+		A54B80722D2DC0EC0064F609 /* Connectivity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A54B80712D2DC0EC0064F609 /* XCRemoteSwiftPackageReference "connectivity" */;
+			productName = Connectivity;
+		};
+		A54B80752D2DC0FB0064F609 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A54B80742D2DC0FB0064F609 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A54B80092D2DB27F0064F609 /* Project object */;
 }
