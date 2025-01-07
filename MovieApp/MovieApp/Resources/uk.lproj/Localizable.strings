@@ -1,0 +1,43 @@
+/* 
+  Localizable.strings
+  MovieApp
+
+  Created by Dmytro on 07.01.2025.
+  
+*/
+
+"unknown_key" = "Невідомо";
+"rating_key" = "Рейтинг";
+"back_key" = "Повернутися";
+"connection_lost_key" = "Ваше з'єднання втрачено. Будь ласка, увімкніть Wi-Fi або підключіться за допомогою мобільних даних.";
+"you_are_offline_key" = "Ваше з'єднання втрачено.";
+"wifi_cellular_key" = "Будь ласка, увімкніть Wi-Fi або підключіться за допомогою мобільних даних.";
+"popular_movies_key" = "Популярні фільми";
+"close_button_key" = "Закрити";
+"unexpected_error" = "Неочікувана помилка";
+"search_popular_key" = "Пошук";
+"pull_refresh_key" = "Оновлення";
+
+
+// keys
+"popularity_desc_key" = "Популярність (від високої до низької)";
+"popularity_asc_key" = "Популярність (від низької до високої)";
+"original_title_asc_key" = "Title (A-Z)";
+"original_title_desc_key" = "Title (Z-A)";
+"revenue_asc_key" = "Дохід (від низького до високого)";
+"revenue_desc_key" = "Дохід (від високого до низького)";
+"primary_release_date_asc_key" = "Дата виходу (спочатку старіші)";
+"primary_release_date_desc_key" = "Дата виходу (спочатку новіші)";
+"title_asc_key" = "Назва (від А до Я)";
+"title_desc_key" = "Назва (від Я до А)";
+"vote_average_asc_key" = "Рейтинг (від низького до високого)";
+"vote_average_desc_key" = "Рейтинг (від високого до низького)";
+"vote_count_asc_key" = "Голосів (від найменшої кількості)";
+"vote_count_desc_key" = "Голосів (від найбільшої кількості)";
+
+"sort_options_key" = "Параметри сортування";
+
+"ok_key" = "OK";
+
+"photo_unavailable_key" = "Фото недоступне";
+"photo_unavailable_info_key" = "Фото, яке ви намагаєтесь переглянути, наразі недоступне. Спробуйте пізніше.";
