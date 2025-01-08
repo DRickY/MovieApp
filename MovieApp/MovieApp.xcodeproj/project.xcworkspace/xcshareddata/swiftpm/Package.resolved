@@ -1,5 +1,5 @@
 {
-  "originHash" : "f5a3831668ca4c273baf20dfde598d8298bec14e0439e08582b8fd9ef4527deb",
+  "originHash" : "696f4092513ada0760b1a239e1470050e26b41b73f4ca0ef696307d8ed01dde0",
   "pins" : [
     {
       "identity" : "combine-interception",
@@ -13,10 +13,10 @@
     {
       "identity" : "combinecocoa",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/EduDo-Inc/CombineCocoa.git",
+      "location" : "https://github.com/CombineCommunity/CombineCocoa.git",
       "state" : {
-        "revision" : "57ee891f1c662cad97fdfe48cb06faffad93a1ea",
-        "version" : "0.3.0"
+        "revision" : "7300c75ff9e072aa7fd0fccefcc88f74aae9bf56",
+        "version" : "0.4.1"
       }
     },
     {
