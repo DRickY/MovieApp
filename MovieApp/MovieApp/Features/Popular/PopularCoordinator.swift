@@ -36,9 +36,8 @@ final class PopularCoordinator: Coordinator {
                 }
 
                 switch navigation {
-                case .open:
-                    break
-                //                    self?.openDetail(model)
+                case .open(let model):
+                    self?.openDetail(model)
                 }
             }
             .store(in: &storage)
@@ -47,6 +46,21 @@ final class PopularCoordinator: Coordinator {
 
         navigationController.viewControllers = [popularViewController]
         presenter?.presenting(navigationController, animated: false)
+    }
+
+    private func openDetail(_ model: Movie) {
+        let detailCoordinator = MovieDetailCoordinator(presenter: presenter?.presentedViewController,
+                                                       model: model)
+        detailCoordinator.start()
+
+        log.info(tag, "Open Detail Movie Screen")
+
+        detailCoordinator.signal = { [weak self] in
+            log.info(tag, "Close Detail Movie Screen")
+            self?.detailCoordinator = nil
+        }
+
+        self.detailCoordinator = detailCoordinator
     }
 
     private func showAlert() {

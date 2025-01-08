@@ -19,6 +19,14 @@ enum FeatureFactory {
         return (popularViewController, popularViewModel)
     }
 
+    static func detailView(movieId: Int) -> FactoryResult<MovieDetailViewController, MovieDetailNavigatorAction> {
+        let viewController = MovieDetailViewController()
+        let viewModel = MovieDetailViewModel(view: viewController, movieId: movieId)
+        viewController.setViewModel(viewModel: viewModel)
+
+        return (viewController, viewModel)
+    }
+
     static var offlineAlert: UIViewController {
         return Self.alert(title: L10n.offine, message: L10n.wificellular, actionTitle: L10n.Ok)
     }
