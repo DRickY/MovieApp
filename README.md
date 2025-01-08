@@ -12,7 +12,7 @@
 - **Platform**: iOS 14.0.
 - **Networking**: `URLSession`
 - **Architecture**: MVVM + Coordinator + Combine.
-- **UI**: UIKit + AutoLayout (Navite Anchors).
+- **UI**: UIKit + AutoLayout (Native Anchors).
 - **3rd-part-libs** combine-interception, CombineCocoa, CombineExt, Kingfisher, Connectivity
 
 #### Other
