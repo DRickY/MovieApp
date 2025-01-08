@@ -27,6 +27,14 @@ enum FeatureFactory {
         return (viewController, viewModel)
     }
 
+    static func photoView(_ url: URL) -> FactoryResult<PhotoViewController, PhotoViewNavigatorAction> {
+        let viewController = PhotoViewController()
+        let viewModel = PhotoViewModel(view: viewController, url: url)
+        viewController.setViewModel(viewModel: viewModel)
+
+        return (viewController, viewModel)
+    }
+
     static var offlineAlert: UIViewController {
         return Self.alert(title: L10n.offine, message: L10n.wificellular, actionTitle: L10n.Ok)
     }

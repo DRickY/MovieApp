@@ -44,9 +44,8 @@ final class MovieDetailCoordinator: Coordinator {
                 case .back:
                     self?.navigation?.popViewController(animated: true)
                     self?.signal?()
-                case .openPhoto:
-                    //                    self?.showPhoto(movie)
-                    break
+                case .openPhoto(let movie):
+                    self?.showPhoto(movie)
                 case .openTrailer(let video):
                     self?.showTrailer(video: video, isOffline: !connect.isReachable)
                 }
@@ -58,6 +57,34 @@ final class MovieDetailCoordinator: Coordinator {
         } else {
             presenter?.presenting(viewController, animated: true)
         }
+    }
+
+    private func showPhoto(_ movie: MovieContent) {
+        log.info(tag, "Open Full Photo Screen")
+
+        guard let url = movie.backdrop ?? movie.poster else {
+            let alert = FeatureFactory.alert(title: L10n.photoUnavailable,
+                                             message: L10n.photoUnavailableInfo,
+                                             actionTitle: L10n.Ok)
+            presenter?.present(alert, animated: true)
+            return
+        }
+
+        let (vc, viewModel) = FeatureFactory.photoView(url)
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+
+        viewModel.action
+            .sink { [weak vc] in
+                switch $0 {
+                case .dismiss:
+                    log.info(tag, "Close Full Photo Screen")
+                    vc?.dismiss(animated: true, completion: nil)
+                }
+            }
+            .store(in: &storage)
+
+        presenter?.present(vc, animated: true)
     }
 
     private func showTrailer(video: VideoContent, isOffline: Bool) {
