@@ -16,7 +16,8 @@ final public class Application {
 
     private var modules: [Module] {
         return [
-            AppModule()
+            AppModule(),
+            PopularModule()
         ]
     }
 

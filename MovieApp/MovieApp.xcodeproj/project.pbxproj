@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		A54B80682D2DC0B30064F609 /* CombineInterception in Frameworks */ = {isa = PBXBuildFile; productRef = A54B80672D2DC0B30064F609 /* CombineInterception */; };
 		A54B806A2D2DC0B30064F609 /* CombineInterceptionMacros in Frameworks */ = {isa = PBXBuildFile; productRef = A54B80692D2DC0B30064F609 /* CombineInterceptionMacros */; };
-		A54B806D2D2DC0C20064F609 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A54B806C2D2DC0C20064F609 /* CombineCocoa */; };
 		A54B80702D2DC0D50064F609 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = A54B806F2D2DC0D50064F609 /* CombineExt */; };
 		A54B80732D2DC0EC0064F609 /* Connectivity in Frameworks */ = {isa = PBXBuildFile; productRef = A54B80722D2DC0EC0064F609 /* Connectivity */; };
 		A54B80762D2DC0FB0064F609 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A54B80752D2DC0FB0064F609 /* Kingfisher */; };
+		A597EBD42D2EB443007823A5 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A597EBD32D2EB443007823A5 /* CombineCocoa */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +49,7 @@
 				A54B80732D2DC0EC0064F609 /* Connectivity in Frameworks */,
 				A54B80702D2DC0D50064F609 /* CombineExt in Frameworks */,
 				A54B80682D2DC0B30064F609 /* CombineInterception in Frameworks */,
-				A54B806D2D2DC0C20064F609 /* CombineCocoa in Frameworks */,
+				A597EBD42D2EB443007823A5 /* CombineCocoa in Frameworks */,
 				A54B806A2D2DC0B30064F609 /* CombineInterceptionMacros in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,10 +96,10 @@
 			packageProductDependencies = (
 				A54B80672D2DC0B30064F609 /* CombineInterception */,
 				A54B80692D2DC0B30064F609 /* CombineInterceptionMacros */,
-				A54B806C2D2DC0C20064F609 /* CombineCocoa */,
 				A54B806F2D2DC0D50064F609 /* CombineExt */,
 				A54B80722D2DC0EC0064F609 /* Connectivity */,
 				A54B80752D2DC0FB0064F609 /* Kingfisher */,
+				A597EBD32D2EB443007823A5 /* CombineCocoa */,
 			);
 			productName = MovieApp;
 			productReference = A54B80112D2DB27F0064F609 /* MovieApp.app */;
@@ -132,11 +132,11 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A54B80662D2DC0B30064F609 /* XCRemoteSwiftPackageReference "combine-interception" */,
-				A54B806B2D2DC0C20064F609 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 				A54B806E2D2DC0D50064F609 /* XCRemoteSwiftPackageReference "CombineExt" */,
 				A54B80712D2DC0EC0064F609 /* XCRemoteSwiftPackageReference "connectivity" */,
 				A54B80742D2DC0FB0064F609 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				A54B80772D2DC1380064F609 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				A597EBD22D2EB443007823A5 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A54B80122D2DB27F0064F609 /* Products */;
@@ -405,14 +405,6 @@
 				minimumVersion = 0.3.1;
 			};
 		};
-		A54B806B2D2DC0C20064F609 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/EduDo-Inc/CombineCocoa.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
-			};
-		};
 		A54B806E2D2DC0D50064F609 /* XCRemoteSwiftPackageReference "CombineExt" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CombineCommunity/CombineExt.git";
@@ -445,6 +437,14 @@
 				version = 0.57.1;
 			};
 		};
+		A597EBD22D2EB443007823A5 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -457,11 +457,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A54B80662D2DC0B30064F609 /* XCRemoteSwiftPackageReference "combine-interception" */;
 			productName = CombineInterceptionMacros;
-		};
-		A54B806C2D2DC0C20064F609 /* CombineCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A54B806B2D2DC0C20064F609 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
-			productName = CombineCocoa;
 		};
 		A54B806F2D2DC0D50064F609 /* CombineExt */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -477,6 +472,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A54B80742D2DC0FB0064F609 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		A597EBD32D2EB443007823A5 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A597EBD22D2EB443007823A5 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

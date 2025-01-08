@@ -54,6 +54,14 @@ struct AppModule: Module {
         ioc.register(for: IDateTimeFormatter.self) { _ in
             return DateTimeFormatter()
         }
+
+        ioc.register(for: IGenreRepository.self, lifetime: .singleton) { _ in
+            GenreRepository()
+        }
+
+        ioc.register(for: IGenreService.self, lifetime: .singleton) { _ in
+            GenreService()
+        }
     }
 
     func prepareModule(using ioc: DependencyContainer) {
