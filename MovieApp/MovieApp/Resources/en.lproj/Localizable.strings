@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  MovieApp
+
+  Created by Dmytro on 07.01.2025.
+  
+*/
+
+"unknown_key" = "unknown";
+"rating_key" = "Rating";
+"back_key" = "Back";
+"connection_lost_key" = "You are offline. Please, enable your Wi-Fi or connect using cellular data.";
+"you_are_offline_key" = "You are offline.";
+"wifi_cellular_key" = "Please, enable your Wi-Fi or connect using cellular data.";
+"popular_movies_key" = "Popular Movies";
+"close_button_key" = "Сlose";
+"unexpected_error" = "Unexpected error";
+"search_popular_key" = "Search";
+"pull_refresh_key" = "Pull up to refresh...";
+
+// keys
+"popularity_desc_key" = "Popularity (High to Low)";
+"popularity_asc_key" = "Popularity (Low to High)";
+"revenue_asc_key" = "Revenue (Low to High)";
+"revenue_desc_key" = "Revenue (High to Low)";
+"primary_release_date_asc_key" = "Release Date (Oldest First)";
+"primary_release_date_desc_key" = "Release Date (Newest First)";
+"title_asc_key" = "Title (A-Z)";
+"title_desc_key" = "Title (Z-A)";
+"vote_average_asc_key" = "Rating (Low to High)";
+"vote_average_desc_key" = "Rating (High to Low)";
+"vote_count_asc_key" = "Votes (Fewest First)";
+"vote_count_desc_key" = "Votes (Most First)";
+
+"sort_options_key" = "Sort Options";
+
+"ok_key" = "OK";
+
+"photo_unavailable_key" = "Photo Unavailable";
+"photo_unavailable_info_key" = "The photo you're trying to view is not currently available. Please try again later.";
