@@ -9,6 +9,6 @@ import Foundation
 
 public protocol LoggerFormatter {
     var pattern: String { get }
-    
+
     func format(_ message: Any, _ stack: LoggerStackTrace) -> Any
 }
